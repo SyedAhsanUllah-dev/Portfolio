@@ -1,102 +1,146 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
 import Title from "../Elements/Title";
-import ByteBuy from "../../assets/ProjectImg/ByteBuy E Commerce/ByteBuy.webp";
-import BankWebApp from "../../assets/ProjectImg/BankingWebApp/BankingWebApp.webp";
-import ResumeTitle from "../Resume/ResumeTitle";
 import {
   FaExternalLinkAlt,
-  FaLink,
-  FaOpenid,
+  FaGithub,
   FaStore,
   FaUikit,
+  FaLaptopCode,
+  FaCode,
+  FaCalendarAlt,
+  FaUserTie,
 } from "react-icons/fa";
+
 const Project = () => {
+  const projectsData = [
+    {
+      id: 1,
+      title: "ByteBuy E-Commerce Platform",
+      category: "Full Stack",
+      shortDescription: "Full-featured e-commerce web application with modern shopping cart functionality, user authentication, and payment integration.",
+      thumbnail: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+      technologies: ["React.js", "Tailwind CSS", "Firebase", "Zustand", "Stripe"],
+      links: {
+        live: "https://bytebuy-rho.vercel.app/",
+        github: "https://github.com/syedahsanullah-dev/ByteBuy-main",
+      },
+      role: "Full Stack Developer",
+      year: 2025,
+      icon: <FaStore />,
+    },
+    {
+      id: 2,
+      title: "ProBank - Banking App",
+      category: "Object-Oriented Programming",
+      shortDescription: "Feature-rich banking application demonstrating OOP principles with real-time transaction management and user authentication.",
+      thumbnail: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
+      technologies: ["JavaScript", "OOP", "REST API", "MockAPI", "Tailwind"],
+      links: {
+        live: "https://mybankingwebapp.vercel.app/",
+        github: "https://github.com/syedahsanullah-dev/BankingWebApp-main",
+      },
+      role: "Frontend Developer",
+      year: 2025,
+      icon: <FaUikit />,
+    },
+    {
+      id: 3,
+      title: "Personal Portfolio Website",
+      category: "Frontend Design",
+      shortDescription: "Interactive portfolio showcasing projects and skills with smooth animations and modern design aesthetics.",
+      thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      technologies: ["React.js", "Framer Motion", "EmailJS", "Tailwind CSS"],
+      links: {
+        live: "https://syedahsanullah.vercel.app/",
+        github: "https://github.com/syedahsanullah-dev/Portfolio",
+      },
+      role: "Frontend Developer & Designer",
+      year: 2025,
+      icon: <FaLaptopCode />,
+    },
+  ];
+
   return (
-    <div>
+    <section className="py-10">
       <Title title="Recent" subTitle={"Projects"} />
-      <div className="w-full px-6 grid">
-        <div className="px-6">
-          <div id="bytebuy" className="flex flex-col gap-2">
-            <div>
-              <h1 className="font-titleFont font-bold text-base cursor-pointer capitalize text-textColor relative z-10 px-6 py-3 borderBottom group">
-                <span className="text-designColor group inline-flex">
-                  <FaStore />
-                </span>{" "}
-                E-Commerce Store
-                <span className=" w-8 h-8 bg-graident-to-t from-designColor to-gray-600 inline-block rounded-full absolute left-2 top-2.5 opacity-10 -z-10  -translate-x-0 group-hover:translate-x-2  bg-linear-0 duration-500"></span>
-                <span className="inline-flex ml-2 group-hover:text-designColor">
-                  <a
-                    href="https://bytebuy-rho.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaExternalLinkAlt />
-                  </a>
-                </span>
-              </h1>
-              <p className="mt-2 text-zinc-500 hover:text-zinc-50 duration-200">
-                ByteBuy is a live e-commerce web application that showcases a
-                fully functional online store built using modern frontend
-                technologies like React and Tailwind CSS. It features a dynamic
-                product browsing experience, allowing users to explore items and
-                interact with the UI smoothly. The project demonstrates
-                essential e-commerce functionality such as product listings and
-                responsive design, making it ideal for portfolio presentation.
-                It’s deployed on Vercel and accessible via a live demo link,
-                showing real deployment workflow skills. This project highlights
-                your ability to build real-world web applications from concept
-                to deployment.
-              </p>
-            </div>
-            <div className="flex z-25 md:-mt-25 ">
+      
+      <div className="w-full px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10">
+        {projectsData.map((project) => (
+          <div 
+            key={project.id} 
+            className="flex flex-col bg-zinc-900/40 border border-zinc-800 rounded-2xl overflow-hidden hover:border-designColor/50 transition-all duration-500 group"
+          >
+            {/* Image Container */}
+            <div className="relative overflow-hidden h-64">
               <img
-                src={ByteBuy}
-                alt="ByteBuy"
-                className="scale-100 md:scale-90 hover:scale-100 duration-300 object-contain opacity-80 hover:opacity-100"
+                src={project.thumbnail}
+                alt={project.title}
+                className="w-full h-full object-cover scale-100 group-hover:scale-110 duration-500 opacity-70 group-hover:opacity-100"
               />
+              <div className="absolute top-4 right-4 flex gap-2">
+                <a 
+                  href={project.links.github} 
+                  target="_blank" 
+                  className="p-2 bg-zinc-900/80 rounded-full text-zinc-300 hover:text-designColor transition-colors"
+                >
+                  <FaGithub size={18} />
+                </a>
+                <a 
+                  href={project.links.live} 
+                  target="_blank" 
+                  className="p-2 bg-zinc-900/80 rounded-full text-zinc-300 hover:text-designColor transition-colors"
+                >
+                  <FaExternalLinkAlt size={16} />
+                </a>
+              </div>
+              <div className="absolute bottom-4 left-4">
+                 <span className="px-3 py-1 bg-designColor text-black text-xs font-bold rounded-md uppercase">
+                   {project.category}
+                 </span>
+              </div>
+            </div>
+
+            {/* Content Container */}
+            <div className="p-6 flex flex-col flex-grow">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-designColor text-xl">
+                  {project.icon}
+                </span>
+                <h3 className="text-xl font-bold text-textColor group-hover:text-designColor transition-colors">
+                  {project.title}
+                </h3>
+              </div>
+
+              {/* Meta Info */}
+              <div className="flex gap-4 text-xs text-zinc-500 mb-4 font-medium">
+                <span className="flex items-center gap-1">
+                  <FaUserTie className="text-designColor" /> {project.role}
+                </span>
+                <span className="flex items-center gap-1">
+                  <FaCalendarAlt className="text-designColor" /> {project.year}
+                </span>
+              </div>
+
+              <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                {project.shortDescription}
+              </p>
+
+              {/* Tech Stack Tags */}
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {project.technologies.slice(0, 5).map((tech, index) => (
+                  <span 
+                    key={index} 
+                    className="text-[10px] px-2 py-1 bg-zinc-800 text-zinc-300 rounded border border-zinc-700 group-hover:border-zinc-600"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <div id="BankingApp" className="flex flex-col gap-2">
-          <div>
-            <h1 className="font-titleFont font-bold text-base cursor-pointer capitalize text-textColor relative z-10 px-6 py-3 borderBottom group">
-              <span className="text-designColor group inline-flex">
-                <FaUikit />
-              </span>{" "}
-              Banking Web App{" "}
-              <span className=" w-8 h-8 bg-graident-to-t from-designColor to-gray-600 inline-block rounded-full absolute left-2 top-2.5 opacity-10 -z-10  -translate-x-0 group-hover:translate-x-2  bg-linear-0 duration-500"></span>
-              <span className="inline-flex ml-2 group-hover:text-designColor">
-                <a
-                  href="https://banking-web-app-nine.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaExternalLinkAlt />
-                </a>
-              </span>
-            </h1>
-            <p className="mt-2 text-zinc-500 hover:text-zinc-50 duration-200">
-              The Banking Web App is a demo financial application built using
-              JavaScript (OOP approach) and Tailwind CSS. It allows users to
-              manage accounts, view balances, and track transaction history
-              through an interactive and responsive interface. The app
-              emphasizes object-oriented programming concepts to structure logic
-              for accounts, transactions, and user interactions. With a clean UI
-              built in Tailwind CSS, it demonstrates practical skills in
-              building dynamic web applications without frameworks{" "}
-            </p>
-          </div>
-          <div className="flex z-25">
-            <img
-              src={BankWebApp}
-              alt="Banking Web App"
-              className="scale-90 hover:scale-100 duration-300 object-contain opacity-80 hover:opacity-100"
-            />
-          </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

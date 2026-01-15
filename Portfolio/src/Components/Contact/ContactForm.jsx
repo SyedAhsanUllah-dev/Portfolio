@@ -88,13 +88,13 @@ const ContactForm = () => {
             <span className="bg-designColor py-1.5 text-gray-700 text-sm font-titleFont font-medium px-4 rounded-md items-center justify-center">
               Email:
             </span>
-            syedahsan727559@gmail.com
+            syedahsanullah.dev@gmail.com
           </p>
           <p className="col-span-6 flex justify-between items-center w-full text-lg text-[#ccc] py-4 borderBottom">
             <span className="bg-designColor py-1.5 text-gray-700 text-sm font-titleFont font-medium px-4 rounded-md items-center justify-center">
               Phone:
             </span>
-            +92 3327706350
+            +92 3332281460
           </p>
           <p className="col-span-6 flex justify-between items-center w-full text-lg text-[#ccc] py-4 borderBottom">
             <span className="bg-designColor py-1.5 text-gray-700 text-sm font-titleFont font-medium px-4 rounded-md items-center justify-center">

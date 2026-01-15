@@ -3,47 +3,35 @@ import {
   FaLaptopCode,
   FaReact,
   FaServer,
-
 } from "react-icons/fa";
 
 const Experience = () => {
   const experienceData = [
     {
       id: 1,
-      year: "2025 – Present",
-      title: "Frontend Developer",
-      company: "Self Learning / Freelance",
-      description:
-        "Working on building modern, responsive web applications using React.js, Tailwind CSS, and JavaScript. Created portfolio projects like a demo banking app and an e-commerce website.",
-      icon: FaLaptopCode,
-    },
-    {
-      id: 2,
-      year: "2024 – 2025",
-      title: "React.js Intern",
-      company: "Online Projects / Personal",
-      description:
-        "Gained hands-on experience with React components, hooks, state management, and reusable UI components. Built small web apps for practice and portfolio.",
-      icon: FaReact,
-    },
-    {
-      id: 3,
-      year: "2023 – 2024",
-      title: "Frontend Development Trainee",
-      company: "Freelance / Demo Projects",
-      description:
-        "Learned frontend web development basics and worked on small projects, focusing on HTML, CSS, JavaScript, and responsive design principles.",
-      icon: FaBriefcase,
-    },
-    {
-      id: 4,
-      year: "2022 – 2023",
-      title: "Student Developer",
-      company: "College Projects",
-      description:
-        "Worked on academic projects using HTML, CSS, and JavaScript. Developed understanding of coding best practices and collaborative project work.",
-      icon: FaServer,
-    },
+      title: "Freelance Web Developer",
+      company: "Self-Employed",
+      location: "Remote",
+      startDate: "2023",
+      endDate: "Present",
+      current: true,
+      type: "Freelance",
+      description: "Working on various web development projects, building modern responsive websites and web applications for clients using React.js, JavaScript, and modern web technologies.",
+      responsibilities: [
+        "Develop responsive web applications using React.js and Tailwind CSS",
+        "Implement user authentication and database integration with Firebase",
+        "Create RESTful APIs and integrate third-party services",
+        "Collaborate with clients to understand requirements and deliver solutions",
+        "Maintain and update existing web applications",
+        "Optimize website performance and ensure cross-browser compatibility"
+      ],
+      technologies: ["React.js", "JavaScript", "Tailwind CSS", "Firebase", "Node.js", "Git"],
+      achievements: [
+        "Successfully delivered multiple projects on time",
+        "Built strong client relationships through effective communication",
+        "Continuously expanding technical skills through real-world projects"
+      ]
+    }
   ];
 
   return (
@@ -51,48 +39,81 @@ const Experience = () => {
       <div>
         <h1 className="font-titleFont font-bold text-base cursor-pointer capitalize text-textColor relative z-10 px-6 py-3 borderBottom group">
           <span className="text-designColor group">
-            {" "}
             <FaBriefcase className="inline-flex" />
           </span>{" "}
           Experience{" "}
-          <span className=" w-8 h-8 bg-graident-to-t from-designColor to-gray-600 inline-block rounded-full absolute left-2 top-2.5 opacity-10 -z-10  -translate-x-0 group-hover:translate-x-2  bg-linear-0 duration-500">
-            {" "}
+          <span className="w-8 h-8 bg-gradient-to-t from-designColor to-gray-600 inline-block rounded-full absolute left-2 top-2.5 opacity-10 -z-10 -translate-x-0 group-hover:translate-x-2 duration-500">
           </span>
         </h1>
       </div>
-      <div>
-        <div className="flex flex-col">
-          {experienceData.map((item) => (
-            <ExperienceCard
-              key={item.id}
-              year={item.year}
-              title={item.title}
-              institute={item.company}
-              description={item.description}
-            />
-          ))}
-        </div>
+      <div className="mt-6 flex flex-col gap-8">
+        {experienceData.map((item) => (
+          <ExperienceCard key={item.id} item={item} />
+        ))}
       </div>
     </div>
   );
 };
 
-const ExperienceCard = ({ year, title, company, description }) => {
-  const YearP = year.includes("Present")
-    ? "w-fit px-4 text-center border-designColor text-designColor py-[1px] border-1 shadow-lg font-titleFont rounded-sm font-semibold text-sm duration-300 hover:border-white hover:text-white"
-    : "w-fit px-4 text-center border-zinc-600 text-zinc-400 py-[1px] border-1 shadow-lg font-titleFont rounded-sm font-semibold text-sm hover:border-zinc-50 hover:text-zinc-50 duration-300 ";
+const ExperienceCard = ({ item }) => {
+  const { title, company, location, startDate, endDate, description, responsibilities, technologies, current } = item;
+  
+  const isCurrent = current || endDate === "Present";
 
   return (
-    <div className="flex flex-col gap-2.5 py-6 borderBottom">
-      <h6 className={`${YearP}`}>{year}</h6>
+    <div className="relative flex flex-col gap-4 p-6 border border-zinc-800 rounded-xl bg-bodyColor hover:border-designColor transition-all duration-300">
+      {/* Date & Type Badge */}
+      <div className="flex justify-between items-center">
+        <span
+          className={`w-fit px-4 py-[2px] text-sm font-semibold rounded-full border
+            ${isCurrent ? "border-designColor text-designColor" : "border-zinc-600 text-zinc-400"}`}
+        >
+          {startDate} – {endDate}
+        </span>
+        <span className="text-xs font-medium text-zinc-500 uppercase tracking-widest">
+            {item.type}
+        </span>
+      </div>
 
-      <h3 className="font-medium text-lg font-titleFont text-gray-200">
-        {title}
-      </h3>
+      {/* Title & Company */}
+      <div>
+        <h3 className="text-xl font-titleFont font-semibold text-gray-100">
+          {title}
+        </h3>
+        <p className="text-sm text-designColor font-medium mt-1">
+          {company} <span className="text-zinc-500">· {location}</span>
+        </p>
+      </div>
 
-      <h4 className="text-[#999] text-sm -mt-2">{company}</h4>
+      {/* Description */}
+      <p className="text-base text-gray-400 leading-relaxed italic">
+        {description}
+      </p>
 
-      <p className="text-[#999] text-base pr-10 font-medium">{description}</p>
+      {/* Responsibilities List */}
+      {responsibilities?.length > 0 && (
+        <ul className="flex flex-col gap-2 list-disc list-inside text-sm text-gray-400">
+          {responsibilities.map((resp, idx) => (
+            <li key={idx} className="leading-relaxed">
+              <span className="relative -left-2">{resp}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {/* Technologies Badges */}
+      {technologies?.length > 0 && (
+        <div className="flex flex-wrap gap-2 pt-2">
+          {technologies.map((tech, idx) => (
+            <span
+              key={idx}
+              className="text-[10px] uppercase tracking-wider px-2 py-1 rounded bg-zinc-800 text-gray-300 border border-zinc-700 hover:border-designColor transition-colors"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

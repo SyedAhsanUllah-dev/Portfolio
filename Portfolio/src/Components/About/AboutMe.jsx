@@ -1,8 +1,8 @@
 import React from "react";
 
 const AboutMe = () => {
-  let title = `Hello! I'm Ahsan Gillani`;
-  let aboutMe = `Web designer from Pakistan, Lahore. I am a beginner in website design and building, also good at ReactJS.`;
+  let title = `Hello! I'm Syed Ahsan Ullah`;
+  let aboutMe = `Passionate Frontend Developer specializing in React.js and modern web technologies. Currently pursuing BS Software Engineering (7th semester) at Virtual University of Pakistan with hands-on experience building production-ready web applications. Strong problem-solver with expertise in creating responsive, user-friendly interfaces and a commitment to continuous learning in the ever-evolving web development landscape.`;
 
   return (
     <div className="flex flex-col md:flex-row pb-6 w-full">
@@ -17,27 +17,28 @@ const AboutMe = () => {
         <ul className="w-full">
           <li className="flex w-full items-center justify-between text-zinc-400 text-base font-normal borderBottom py-2">
             <span className="bg-designColor text-black uppercase px-4 py-[1px] rounded-md">
+              status:
+            </span>
+            <span>Available for Internship</span>
+          </li>
+          <li className="flex w-full items-center justify-between text-zinc-400 text-base font-normal borderBottom py-2">
+            <span className="bg-designColor text-black uppercase px-4 py-[1px] rounded-md">
               Age:
             </span>
-            <span>24</span>
+            <span>21</span>
           </li>
           <li className="flex w-full items-center justify-between text-zinc-400 text-base font-normal borderBottom py-2">
             <span className="bg-designColor text-black uppercase px-4 py-[1px] rounded-md">
               Residence:
             </span>
-            <span>USA</span>
+            <span>Pakistan</span>
           </li>
-          <li className="flex w-full items-center justify-between text-zinc-400 text-base font-normal borderBottom py-2">
-            <span className="bg-designColor text-black uppercase px-4 py-[1px] rounded-md">
-              Freelance:
-            </span>
-            <span>Avaliable</span>
-          </li>
+          
           <li className="flex w-full items-center justify-between text-zinc-400 text-base font-normal borderBottom py-2">
             <span className="bg-designColor text-black uppercase px-4 py-[1px] rounded-md">
               Address:
             </span>
-            <span>Lahore, Pakistan</span>
+            <span>Ali Town, Lahore, Pakistan</span>
           </li>
         </ul>
       </div>

@@ -7,6 +7,7 @@ import Typewriter from "typewriter-effect";
 import {
   FaFacebook,
   FaGithub,
+  FaGoogle,
   FaLinkedin,
   FaTwitter,
   FaYoutube,
@@ -15,7 +16,7 @@ import { FiInstagram, FiMail, FiSend } from "react-icons/fi";
 import { BsCloudLightningFill } from "react-icons/bs";
 const Left = ({handleShowPage}) => {
   const [text] = useTypewriter({
-    words: ["Web Developer", "Front-End Developer", "UI Desginer"],
+    words: ["Web Developer", "Front-End Developer", "ReactJS Developer"],
     loop: true,
     typeSpeed: 30,
     deleteSpeed: 20,
@@ -27,7 +28,7 @@ const Left = ({handleShowPage}) => {
       {/* Profile Img */}
       <div className="w-full md:h-3/5 object-contain">
         <img
-          src={profileImg}
+          src='https://avatars.githubusercontent.com/u/254905093?v=4'
           alt="profile Picture"
           className="w-full h-full rounded-2xl object-scale-down borderBottom border-b-5 borderRight border-r-2"
           loading="priority"
@@ -45,29 +46,52 @@ const Left = ({handleShowPage}) => {
             <Cursor cursorBlinking="false" cursorStyle="|" />
           </p>
           <div className="flex justify-center gap-2 mt-2 cursor-pointer">
-            <span className="hover:text-designColor duration-300 hover:scale-125 cursor-pointer text-xl">
+           
+           <a href="https://github.com/syedahsanullah-dev" target="_blank" rel='noopener noreferrer' > 
+           <span className="hover:text-designColor duration-300 hover:scale-125 cursor-pointer text-xl">
               <FaGithub />
             </span>
+              </a>
+           <a href="https://www.linkedin.com/in/syed-ahsan-ullah-dev" target="_blank" rel='noopener noreferrer' > 
+
             <span className="hover:scale-125 hover:text-designColor duration-300 cursor-pointer text-xl">
               <FaLinkedin />
             </span>
+             </a>
+           <a href="" target="_blank" rel='noopener noreferrer' > 
+
             <span className="hover:scale-125 hover:text-designColor duration-300 cursor-pointer text-xl">
               <FaYoutube />
             </span>
+             </a>
+           <a href="" target="_blank" rel='noopener noreferrer' > 
+
             <span className="hover:scale-125 hover:text-designColor duration-300 cursor-pointer text-xl">
               <FaFacebook />
             </span>
+             </a>
+           <a href="" target="_blank" rel='noopener noreferrer' > 
+
             <span className="hover:scale-125 hover:text-designColor duration-300 cursor-pointer text-xl">
               <FiInstagram />
             </span>
+             </a>
+           <a href="https://sites.google.com/view/syedahsanullah/home" target="_blank" rel='noopener noreferrer' > 
+
             <span className="hover:scale-125 hover:text-designColor duration-300 cursor-pointer text-xl">
-              <FaTwitter />
+              <FaGoogle />
             </span>
+             </a>
+           <a href="mailto:syedahsanullah.dev@gmail.com"  rel='noopener noreferrer' > 
+
             <span className="hover:scale-125 hover:text-designColor duration-300 cursor-pointer text-xl">
               <FiMail />
             </span>
+             </a>
+
           </div>
         </div>
+          {/* Buttons */}
         <div className="flex h-12 ">
           <a
             href=""
@@ -89,8 +113,7 @@ const Left = ({handleShowPage}) => {
             </button>
           </a>
         </div>
-        {/* Buttons */}
-        <div></div>
+      
       </div>
     </div>
   );

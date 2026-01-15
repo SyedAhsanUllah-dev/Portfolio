@@ -31,56 +31,66 @@ const FunFactCard = ({ icon: Icon, title }) => {
 
 const FunFact = () => {
  const FunFactData = [
-  {
-    id: 1,
-    icon: BiCodeAlt,
-    title: "Clean Code Lover",
-  },
-  {
-    id: 2,
-    icon: FaReact,
-    title: "React.js Enthusiast",
-  },
-  {
-    id: 3,
-    icon: BiBug,
-    title: "Bug Fixing Addict",
-  },
-  {
-    id: 4,
-    icon: BiCoffee,
-    title: "Powered by Coffee",
-  },
-  {
-    id: 5,
-    icon: FaLaptopCode,
-    title: "Frontend Focused",
-  },
-  {
-    id: 6,
-    icon: FaKeyboard,
-    title: "Code Every Day",
-  },
-  {
-    id: 7,
-    icon: FaLightbulb,
-    title: "Problem Solver",
-  },
-  {
-    id: 8,
-    icon: BiRocket,
-    title: "Always Learning",
-  },
-  {
-    id: 9,
-    icon: FaMobileAlt,
-    title: "Responsive Design Fan",
-  },
-  {
-    id: 10,
-    icon: BiTime,
-    title: "Late-Night Coder",
-  },
+{
+      "id": 1,
+      "title": "Clean Code Lover",
+      "icon": BiCodeAlt,
+      "description": "Always striving to write clean, maintainable code"
+    },
+    {
+      "id": 2,
+      "title": "React.js Enthusiast",
+      "icon": FaReact,
+      "description": "Passionate about building with React ecosystem"
+    },
+    {
+      "id": 3,
+      "title": "Bug Fixing Addict",
+      "icon": BiBug,
+      "description": "Love the challenge of solving complex problems"
+    },
+    {
+      "id": 4,
+      "title": "Powered by Coffee",
+      "icon": BiCoffee,
+      "description": "Coffee fuels my coding sessions"
+    },
+    {
+      "id": 5,
+      "title": "Frontend Focused",
+      "icon": FaLaptopCode,
+      "description": "Specialized in creating beautiful user interfaces"
+    },
+    {
+      "id": 6,
+      "title": "Code Every Day",
+      "icon": FaKeyboard,
+      "description": "Consistent daily coding practice"
+    },
+    {
+      "id": 7,
+      "title": "Problem Solver",
+      "icon": FaLightbulb,
+      "description": "Enjoy tackling challenging coding problems"
+    },
+    {
+      "id": 8,
+      "title": "Always Learning",
+      "icon": BiRocket,
+      "description": "Constantly exploring new technologies"
+    },
+    {
+      "id": 9,
+      "title": "Responsive Design Fan",
+      "icon": FaMobileAlt,
+      "description": "Mobile-first approach in all projects"
+    },
+    {
+      "id": 10,
+      "title": "Late-Night Coder",
+      "icon": BiTime,
+      "description": "Most productive during night hours"
+    }
 ];
   return (
     <div className="flex flex-row overflow-y-hidden overflow-x-scroll custom-scroll pb-5">

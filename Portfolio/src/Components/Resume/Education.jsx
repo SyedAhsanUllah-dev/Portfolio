@@ -1,40 +1,152 @@
-import {
-  FaGraduationCap,
-} from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
 
 const Education = () => {
   const educationData = [
+    // ===== FORMAL / LEARNING JOURNEY =====
     {
       id: 1,
-      year: "2024 – Present",
+      type: "education",
       title: "Frontend Web Development",
       institute: "Self Learning / Online Platforms",
+      location: "Remote",
+      startDate: "2024",
+      endDate: "Present",
+      status: "Ongoing",
       description:
         "Learning modern frontend development using JavaScript, React.js, and Tailwind CSS. Built real-world projects including a demo banking app and an e-commerce website.",
+      skills: ["JavaScript", "React.js", "Tailwind CSS", "UI Development"],
     },
+
+    // ===== CERTIFICATIONS =====
     {
       id: 2,
-      year: "2023 – 2024",
-      title: "JavaScript & React Fundamentals",
-      institute: "Online Courses & Practice",
-      description:
-        "Focused on JavaScript fundamentals, React components, hooks, state management, and building reusable UI components.",
+      type: "certification",
+      title: "HTML Essentials",
+      institute: "Cisco Networking Academy",
+      location: "Online",
+      issueDate: "August 2025",
+      completionDate: "September 2025",
+      status: "Completed",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["HTML5", "Semantic HTML", "Web Development"],
+      category: "Frontend Development",
     },
     {
       id: 3,
-      year: "2022 – 2023",
-      title: "Intermediate in Computer Science",
-      institute: "College / Board of Intermediate Education",
-      description:
-        "Studied computer science basics, programming logic, problem-solving techniques, and foundational IT concepts.",
+      type: "certification",
+      title: "CSS Essentials",
+      institute: "Cisco Networking Academy",
+      location: "Online",
+      issueDate: "August 2025",
+      completionDate: "Present",
+      status: "In Progress",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["CSS3", "Responsive Design", "Flexbox", "Grid"],
+      category: "Frontend Development",
     },
     {
       id: 4,
-      year: "2020 – 2022",
-      title: "Matriculation (Science)",
-      institute: "Secondary School Education Board",
-      description:
-        "Completed secondary education with a focus on science subjects, building interest in technology and software development.",
+      type: "certification",
+      title: "JavaScript Web Development",
+      institute: "Cisco Networking Academy",
+      location: "Online",
+      issueDate: "September 2025",
+      completionDate: "Present",
+      status: "In Progress",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["JavaScript", "ES6+", "DOM", "Async Programming"],
+      category: "Frontend Development",
+    },
+    {
+      id: 5,
+      type: "certification",
+      title: "Programming Essentials in C++",
+      institute: "Cisco Networking Academy",
+      location: "Online",
+      issueDate: "January 2023",
+      completionDate: "July 2023",
+      status: "Completed",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["C++", "OOP", "Data Structures", "Algorithms"],
+      category: "Programming",
+    },
+    {
+      id: 6,
+      type: "certification",
+      title: "CCNA: Introduction to Networks",
+      institute: "Virtual University Campus, Islamabad",
+      location: "Islamabad",
+      issueDate: "November 2024",
+      completionDate: "December 2024",
+      status: "Completed",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["Networking", "TCP/IP", "Routing", "Switching"],
+      category: "Networking",
+    },
+    {
+      id: 7,
+      type: "certification",
+      title: "Computer Hardware Basics",
+      institute: "Cisco Networking Academy",
+      location: "Online",
+      issueDate: "May 2025",
+      completionDate: "June 2025",
+      status: "Completed",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["Hardware", "Troubleshooting", "PC Assembly"],
+      category: "Hardware",
+    },
+    {
+      id: 8,
+      type: "certification",
+      title: "SEO (Search Engine Optimization)",
+      institute: "DigiSkills.pk (Virtual University)",
+      location: "Remote",
+      issueDate: "November 2022",
+      completionDate: "January 2023",
+      status: "Completed",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["SEO", "Google Analytics", "Keyword Research", "On-page SEO"],
+      category: "Digital Marketing",
+    },
+    {
+      id: 9,
+      type: "certification",
+      title: "Freelancing",
+      institute: "DigiSkills.pk (Virtual University)",
+      location: "Remote",
+      issueDate: "November 2022",
+      completionDate: "January 2023",
+      status: "Completed",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["Freelancing", "Client Management", "Upwork", "Project Bidding"],
+      category: "Business",
+    },
+    {
+      id: 10,
+      type: "certification",
+      title: "WordPress",
+      institute: "DigiSkills.pk (Virtual University)",
+      location: "Remote",
+      issueDate: "March 2023",
+      completionDate: "June 2023",
+      status: "Completed",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["WordPress", "CMS", "Theme Customization", "Plugins"],
+      category: "Web Development",
+    },
+    {
+      id: 11,
+      type: "certification",
+      title: "Data Analytics & Business Intelligence",
+      institute: "DigiSkills.pk (Virtual University)",
+      location: "Remote",
+      issueDate: "March 2023",
+      completionDate: "June 2023",
+      status: "Completed",
+      credentialURL: "https://sites.google.com/view/syedahsanullah/home",
+      skills: ["Data Analysis", "Business Intelligence", "Data Visualization"],
+      category: "Data Science",
     },
   ];
 
@@ -46,44 +158,77 @@ const Education = () => {
             <FaGraduationCap className="inline-flex" />
           </span>{" "}
           Education{" "}
-          <span className=" w-8 h-8 bg-graident-to-t from-designColor to-gray-600 inline-block rounded-full absolute left-2 top-2.5 opacity-10 -z-10  -translate-x-0 group-hover:translate-x-2  bg-linear-0 duration-500">
-            {" "}
+          <span className="w-8 h-8 bg-gradient-to-t from-designColor to-gray-600 inline-block rounded-full absolute left-2 top-2.5 opacity-10 -z-10 -translate-x-0 group-hover:translate-x-2 duration-500">
           </span>
         </h1>
       </div>
-      <div>
-        <div className="flex flex-col">
-          {educationData.map((item) => (
-            <EducationCard
-              key={item.id}
-              year={item.year}
-              title={item.title}
-              institute={item.institute}
-              description={item.description}
-            />
-          ))}
-        </div>
+      <div className="mt-6 flex flex-col gap-6">
+        {educationData.map((item) => (
+          <EducationCard
+            key={item.id}
+            item={item} // Passing the whole object for cleaner access
+          />
+        ))}
       </div>
     </div>
   );
 };
 
-const EducationCard = ({ year, title, institute, description }) => {
-  const YearP = year.includes("Present")
-    ? "w-fit px-4 text-center border-designColor text-designColor py-[1px] border-1 shadow-lg font-titleFont rounded-sm font-semibold text-sm duration-300 hover:border-white hover:text-white"
-    : "w-fit px-4 text-center border-zinc-600 text-zinc-400 py-[1px] border-1 shadow-lg font-titleFont rounded-sm font-semibold text-sm hover:border-zinc-50 hover:text-zinc-50 duration-300 ";
+const EducationCard = ({ item }) => {
+  // Determine dates based on type
+  const displayDate = item.type === "education" 
+    ? `${item.startDate} – ${item.endDate}` 
+    : `${item.issueDate} – ${item.completionDate}`;
+
+  const isCurrent = item.status === "Ongoing" || item.status === "In Progress" || item.endDate === "Present";
 
   return (
-    <div className="flex flex-col gap-2.5 py-6 borderBottom">
-      <h6 className={`${YearP}`}>{year}</h6>
+    <div className="relative flex flex-col gap-4 p-6 border border-zinc-800 rounded-xl bg-bodyColor hover:border-designColor transition-all duration-300">
+      {/* Date Badge */}
+      <span
+        className={`w-fit px-4 py-[2px] text-sm font-semibold rounded-full border
+          ${
+            isCurrent
+              ? "border-designColor text-designColor"
+              : "border-zinc-600 text-zinc-400"
+          }`}
+      >
+        {displayDate}
+      </span>
 
-      <h3 className="font-medium text-lg font-titleFont text-gray-200">
-        {title}
+      {/* Title */}
+      <h3 className="text-xl font-titleFont font-semibold text-gray-100">
+        {item.title}
       </h3>
 
-      <h4 className="text-[#999] text-sm -mt-2">{institute}</h4>
+      {/* Institute */}
+      <p className="text-sm text-gray-400">
+        {item.institute} {item.location && `· ${item.location}`}
+      </p>
 
-      <p className="text-[#999] text-base pr-10 font-medium">{description}</p>
+      {/* Description / Summary */}
+      {item.description && (
+        <p className="text-base text-gray-400 leading-relaxed">{item.description}</p>
+      )}
+
+      {/* Skills / Coursework */}
+      {item.skills?.length > 0 && (
+        <div>
+          <h4 className="text-sm font-semibold text-gray-300 mb-2">
+            {item.type === "education" ? "Key Skills" : "Topics Covered"}
+          </h4>
+          <div className="flex flex-wrap gap-2">
+            {item.skills.map((skill, index) => (
+              <span
+                key={index}
+                className="text-xs px-3 py-1 rounded-full bg-zinc-800 text-gray-300 hover:bg-designColor hover:text-black transition"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

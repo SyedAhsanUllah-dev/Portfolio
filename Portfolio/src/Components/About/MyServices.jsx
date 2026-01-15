@@ -1,6 +1,6 @@
 import React from "react";
 import { BiCodeAlt } from "react-icons/bi";
-import { FaBlog, FaPaintBrush, FaShoppingCart, FaUniversity } from "react-icons/fa";
+import { FaBlog, FaLaptopCode, FaPaintBrush, FaShoppingCart, FaUniversity } from "react-icons/fa";
 import ServicesCard from "./ServicesCard";
 
 const Services = () => {
@@ -10,28 +10,28 @@ const Services = () => {
       icon: BiCodeAlt,
       title: "Frontend Web Development",
       description:
-        "I build modern, responsive websites using JavaScript, React.js, and Tailwind CSS. Focused on clean UI, performance, and reusable components.",
+      "Building modern, responsive websites using React.js, JavaScript, and Tailwind CSS. Focused on clean UI, performance, and reusable components."
     },
     {
       id: 2,
       icon: FaShoppingCart,
-      title: "E-commerce Website Development",
+      title: "E-commerce Development",
       description:
-        "Developed a complete demo e-commerce website with product listing, cart functionality, checkout flow, and responsive design.",
+      "Developing complete e-commerce websites with product listing, cart functionality, checkout flow, and payment integration.",
     },
     {
       id: 3,
-      icon: FaUniversity,
-      title: "Banking Application",
+      icon: FaLaptopCode,
+      title: "Web Application Development",
       description:
-        "Built a banking app with features like user dashboard, balance display, transaction history, and interactive UI using React.",
+      "Creating custom web applications with features like user dashboards, data management, and interactive UI.",
     },
     {
       id: 3,
-      icon: FaBlog,
-      title: "Blog Website",
+      icon: FaPaintBrush,
+      title: "UI/UX Implementation",
       description:
-        "Developed a complete demo Blogging website with Post listing, Articles functionality, Latest flow, and responsive design.",
+      "Converting designs from Figma to fully functional, pixel-perfect web interfaces with smooth animations.",
     },
   ];
   return (
