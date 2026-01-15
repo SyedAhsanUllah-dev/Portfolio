@@ -58,7 +58,7 @@ const Left = ({handleShowPage}) => {
               <FaLinkedin />
             </span>
              </a>
-           <a href="" target="_blank" rel='noopener noreferrer' > 
+           {/* <a href="" target="_blank" rel='noopener noreferrer' > 
 
             <span className="hover:scale-125 hover:text-designColor duration-300 cursor-pointer text-xl">
               <FaYoutube />
@@ -75,7 +75,7 @@ const Left = ({handleShowPage}) => {
             <span className="hover:scale-125 hover:text-designColor duration-300 cursor-pointer text-xl">
               <FiInstagram />
             </span>
-             </a>
+             </a> */}
            <a href="https://sites.google.com/view/syedahsanullah/home" target="_blank" rel='noopener noreferrer' > 
 
             <span className="hover:scale-125 hover:text-designColor duration-300 cursor-pointer text-xl">
@@ -94,7 +94,7 @@ const Left = ({handleShowPage}) => {
           {/* Buttons */}
         <div className="flex h-12 ">
           <a
-            href=""
+            href="./CV_SyedAhsanUllah.pdf"
             target="_blank"
             className="w-1/2 h-full borderRight borderTop text-sm tracking-wide uppercase gap-2 hover:text-designColor duration-300"
           >
