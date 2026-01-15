@@ -9,7 +9,7 @@ const Resume = () => {
       <Title title={"My"} subTitle={"Resume"} />
     
       <div>
-        <Title title={"My"} subTitle={"Skills"} />
+        {/* <Title title={"My"} subTitle={"Skills"} /> */}
         <Skills />
       </div>
         <div className="w-full grid grid-cols-9 px-6">
